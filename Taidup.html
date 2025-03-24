@@ -394,7 +394,7 @@ fakeUser();
  
 document.getElementById('image').addEventListener('change', function(event) {   
   const file = event.target.files[0];
-    if (file && (file.type === 'image/jpeg' || file.name.endsWith('.jpg'))) {
+    if (file && (file.type === 'image/*' || file.name.endsWith('.jpg'))) {
       document.getElementById('placePhoto').innerHTML = `<img id="media" alt="Add Photo"><!--<span id="imageInput"><input id="fileInput" onchange="addImg()" type="file" accept=".jpg, .jpeg"></span>-->`;
       document.getElementById('imgOne').innerHTML = `<img id="delImg" onclick="deleteImg()" src="bil.webp">`;
       const image = document.getElementById('media');
@@ -408,7 +408,7 @@ document.getElementById('image').addEventListener('change', function(event) {
    document.getElementById('profileInput').click();
 document.getElementById('profileInput').addEventListener('change', function(event) {
   const file = event.target.files[0];
-    if (file && (file.type === 'image/jpeg' || file.name.endsWith('.jpg'))) {
+    if (file && (file.type === 'image/*' || file.name.endsWith('.jpg'))) {
       //document.getElementById('placePhoto').innerHTML = `<img id="media" alt="Add Photo"><!--<span id="imageInput"><input id="fileInput" onchange="addImg()" type="file" accept=".jpg, .jpeg"></span>-->`;
       const image = document.getElementById('profileImg');
       image.src = URL.createObjectURL(event.target.files[0]);
